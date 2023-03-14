@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>GLASS RECOMMENDATION</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="pics/banger.png" type="image/gif" sizes="16x16" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/HomePageCss.css') }}"
+    />
+  </head>
+  <body>
+    <!-- <div class="top-logo">
+      <header>
+        <image
+          src="{{ url_for('static', filename='images/facemesh.png') }}"
+          style="width: 250px; height: 100px"
+        ></image>
+        <div class="headers">
+          <h1>Spectacles recommendation</h1>
+        </div>
+        <div class="widgets">
+          <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        </div>
+      </header>
+    </div> 
+    -->
+    <div class="top-logo">
+      <header>
+        <div class="headers"><h1>SPECTACLES RECOMMENDATION</h1></div>
+      </header>
+    </div>
+    <div class="top-container">
+      <h1>See Whats The Best Glasses For Your Face</h1>
+      <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="clustering">Try On Using CNN</a>
+      </div>
+      <div class="main">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1/3</div>
+            <image
+              src="{{ url_for('static', filename='images/pic1.png') }}"
+              style="width: 100%; height: 400px"
+            >
+            </image>
+            <div class="texts">
+              <p></p>
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
+                &#10094;
+              </div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
+                &#10095;
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2/3</div>
+            <image
+              src="{{ url_for('static', filename='images/pic2.png') }}"
+              style="width: 100%; height: 400px"
+            >
+            </image>
+            <div class="texts">
+              <p></p>
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
+                &#10094;
+              </div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
+                &#10095;
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3/3</div>
+
+            <image
+              src="{{ url_for('static', filename='images/pic3.png') }}"
+              style="width: 100%; height: 400px"
+            >
+            </image>
+            <div class="texts">
+              <p></p>
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
+                &#10094;
+              </div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
+                &#10095;
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="mySlides fade">
+          <div class="numbertext">4/4</div>
+          <image
+            src="{{ url_for('static', filename='images/pic4.png') }}"
+            style="width: 100%; height: 400px"
+          >
+          </image>
+          <div class="texts">
+            <p></p>
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
+              &#10094;
+            </div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
+              &#10095;
+            </div>
+          </div>
+        </div> -->
+
+        <br />
+        <div style="text-align: center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <!-- <span class="dot"></span> -->
+
+          <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {
+                slideIndex = 1;
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+              setTimeout(showSlides, 4000);
+            }
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
